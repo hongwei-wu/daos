@@ -8,8 +8,8 @@
 
 : "${UID=1000}"
 
-useradd --no-log-init --uid $UID -o --user-group --create-home --shell /bin/bash \
-            --home /home/daos daos_server
+useradd --no-log-init --uid $UID --user-group --create-home --shell /bin/bash \
+            --home /home/daos -o daos_server
 echo "daos_server:daos_server" | chpasswd
 
 if command -v sudo; then
